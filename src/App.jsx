@@ -136,16 +136,24 @@ export default function App() {
       window.parent.postMessage({ type: 'iframe-resize', height }, '*');
     }
 
+    // Debounce so rapid resize events (dragging a window edge, etc.) don't flood postMessage
+    let resizeTimeout;
+    function debouncedSendHeight() {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(sendHeightToParent, 100);
+    }
+
     sendHeightToParent(); // initial send
     window.addEventListener('load', sendHeightToParent);
-    window.addEventListener('resize', sendHeightToParent);
+    window.addEventListener('resize', debouncedSendHeight);
 
-    const observer = new ResizeObserver(sendHeightToParent);
+    const observer = new ResizeObserver(debouncedSendHeight);
     observer.observe(document.body);
 
     return () => {
+      clearTimeout(resizeTimeout);
       window.removeEventListener('load', sendHeightToParent);
-      window.removeEventListener('resize', sendHeightToParent);
+      window.removeEventListener('resize', debouncedSendHeight);
       observer.disconnect();
     };
   }, []);
