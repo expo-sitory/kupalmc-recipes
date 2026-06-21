@@ -318,10 +318,10 @@ export default function App() {
       <header className="app-header">
         <div>
           <h1 className="title-text">
-            <img src="/icons/kupaladmin.webp" alt="Kupal Admin Icon" className="header-title-icon" />
-            KUPAL RECIPE TREE
+            <img src="/icons/kupal-mc.png" alt="Kupal Admin Icon" className="header-title-icon" />
+            KUPAL MC | CIVILIZATION RECIPE TREE
           </h1>
-          <p className="subtitle-text">Interactive Minecraft recipe explorer for Kupal Civ SMP</p>
+          <p className="subtitle-text">Interactive Minecraft recipe explorer for Kupal Mc | Civilization Server</p>
         </div>
         <div style={{ display: 'flex', gap: '8px' }}>
           <button 

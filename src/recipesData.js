@@ -140,16 +140,6 @@ export const recipesData = [
     description: "The Giga-chad for all potion ingredients"
   },
   {
-    id: "sugar_cane",
-    name: "Sugar Cane",
-    category: "base",
-    tier: 0,
-    outputImage: "/recipes/output_recipe/sugar_cane.png",
-    recipeImage: "/recipes/output_recipe/sugar_cane.png",
-    inputs: [],
-    description: "Sugar cane lang boss."
-  },
-  {
     id: "leather",
     name: "Leather",
     category: "base",
@@ -230,16 +220,6 @@ export const recipesData = [
     description: "Pink kipay. ay violet ."
   },
   {
-    id: "crimson_fungus",
-    name: "Crimson Fungus",
-    category: "nether",
-    tier: 1,
-    outputImage: "/recipes/output_recipe/crimson_fungus.png",
-    recipeImage: "/recipes/crimson_fungus.png",
-    inputs: ["nether_wart"],
-    description: "Fungus found in the Crimson Forest."
-  },
-  {
     id: "crimson_nylium",
     name: "Crimson Nylium",
     category: "nether",
@@ -248,16 +228,6 @@ export const recipesData = [
     recipeImage: "/recipes/crimson_nylium.png",
     inputs: [],
     description: "Mycelium-like netherrack variant."
-  },
-  {
-    id: "warped_fungus",
-    name: "Warped Fungus",
-    category: "nether",
-    tier: 1,
-    outputImage: "/recipes/output_recipe/warped_fungus.png",
-    recipeImage: "/recipes/warped_fungus.png",
-    inputs: ["crimson_fungus"],
-    description: "Fungus found in the Warped Forest."
   },
   {
     id: "warped_nylium",
@@ -616,7 +586,7 @@ export const recipesData = [
     category: "custom_food",
     tier: 1,
     outputImage: "/recipes/output_recipe/Potion_of_Weakness_JE2_BE2.png",
-    recipeImage: "/recipes/soy_sauce.png",
+    recipeImage: "/recipes/toyo.png",
     inputs: ["asin"],
     description: "Rich dark condiment."
   },
@@ -716,7 +686,7 @@ export const recipesData = [
     category: "custom_food",
     tier: 1,
     outputImage: "/recipes/output_recipe/Potion_of_Strength_JE3.png",
-    recipeImage: "ixpu forgot to send nudes i mean the oil recipe",
+    recipeImage: "/recipes/mantika.png",
     inputs: [],
     description: "Cooking oil used for frying and sautéing."
   },
@@ -782,13 +752,13 @@ export const recipesData = [
   },
   {
     id: "specific_reroll",
-    name: "Specific Ethnicity Reroll",
+    name: "Specific Island Ethnicity Reroll",
     category: "combat_utility",
     tier: 3,
     outputImage: "/recipes/output_recipe/ominous_trial_key.png",
     recipeImage: "/recipes/specific-reroll.png",
     inputs: [],
-    description: "Used for specific ethnicity reroll"
+    description: "Used for specific ethnicity reroll from selected Island"
   },
   {
     id: "reroll",
