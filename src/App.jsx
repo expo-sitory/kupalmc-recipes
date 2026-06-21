@@ -129,6 +129,27 @@ export default function App() {
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
 
+  // Report height to parent page when embedded in an iframe (for auto-resize)
+  useEffect(() => {
+    function sendHeightToParent() {
+      const height = document.documentElement.scrollHeight;
+      window.parent.postMessage({ type: 'iframe-resize', height }, '*');
+    }
+
+    sendHeightToParent(); // initial send
+    window.addEventListener('load', sendHeightToParent);
+    window.addEventListener('resize', sendHeightToParent);
+
+    const observer = new ResizeObserver(sendHeightToParent);
+    observer.observe(document.body);
+
+    return () => {
+      window.removeEventListener('load', sendHeightToParent);
+      window.removeEventListener('resize', sendHeightToParent);
+      observer.disconnect();
+    };
+  }, []);
+
   const backgrounds = useMemo(() => [
     '/background/Nether_Portal_background.webp',
     '/background/Overworld_background.webp',
