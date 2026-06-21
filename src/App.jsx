@@ -549,16 +549,6 @@ export default function App() {
 
       </main>
       )}
-
-      
-      <footer className="app-footer">
-        <p>Built for <span>Kupal Civ SMP</span> • Not an official Minecraft product</p>
-        <div className="footer-links">
-          <a href="https://discord.gg/kupalcord" target="_blank" rel="noreferrer">Discord</a>
-          <span> • </span>
-          <a href="https://github.com/frostjade71" target="_blank" rel="noreferrer">Github</a>
-        </div>
-      </footer>
     </div>
   );
 }
