@@ -605,7 +605,7 @@ export const recipesData = [
     name: "Ginger (Luya)",
     category: "custom_food",
     tier: 1,
-    outputImage: "/recipes/output_recipe/pumpkin_seeds.png",
+    outputImage: "/recipes/output_recipe/Beetroot Seeds_1.18.2.png",
     recipeImage: "/recipes/luya.png",
     inputs: [],
     description: "Spicy aromatic root."
